@@ -8,9 +8,37 @@ import 'dart:async';
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:get/get.dart';
+import 'package:miemie/app/home/home_view.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
-void main() => runApp(MaterialApp(home: WebViewExample()));
+import 'app/routes/app_pages.dart';
+import 'app/translation/translation_service.dart';
+import 'app/ui/pages/my_page/my_page.dart';
+
+// void main() => runApp(MaterialApp(home: WebViewExample()));
+void main() => runApp(Main());
+
+
+
+class Main extends StatelessWidget{
+  const Main({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return GetMaterialApp.router(
+      debugShowCheckedModeBanner: false,
+      enableLog: true,
+      // logWriterCallback: Logger.write,
+      // initialRoute: Routes.HOME,
+      getPages: RouteGet.getPages,
+      locale: TranslationService.locale,
+      fallbackLocale: TranslationService.fallbackLocale,
+      translations: TranslationService(),
+    );
+  }
+}
+
 
 class WebViewExample extends StatefulWidget {
   @override
