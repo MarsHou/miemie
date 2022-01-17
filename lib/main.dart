@@ -9,7 +9,6 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
-import 'package:miemie/app/home/home_view.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 import 'app/routes/app_pages.dart';
@@ -19,9 +18,7 @@ import 'app/ui/pages/my_page/my_page.dart';
 // void main() => runApp(MaterialApp(home: WebViewExample()));
 void main() => runApp(Main());
 
-
-
-class Main extends StatelessWidget{
+class Main extends StatelessWidget {
   const Main({Key? key}) : super(key: key);
 
   @override
@@ -35,10 +32,10 @@ class Main extends StatelessWidget{
       locale: TranslationService.locale,
       fallbackLocale: TranslationService.fallbackLocale,
       translations: TranslationService(),
+      darkTheme: ThemeData.dark(),
     );
   }
 }
-
 
 class WebViewExample extends StatefulWidget {
   @override

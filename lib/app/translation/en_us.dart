@@ -1,3 +1,6 @@
+import 'package:miemie/app/translation/string.dart';
+
 const Map<String, String> en_US = {
-  'app_name': 'Mie Mie'
+  APP_NAME: 'Mie Mie',
+  SEARCH_HINT: '搜索或输入网址',
 };

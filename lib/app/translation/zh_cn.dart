@@ -1,5 +1,6 @@
-import 'package:miemie/app/ui/pages/other_page/other_page.dart';
+import 'package:miemie/app/translation/string.dart';
 
 const Map<String, String> zh_CN = {
-  APP_NAME: '咩咩'
+  APP_NAME: '咩咩',
+  SEARCH_HINT: '搜索或输入网址',
 };
